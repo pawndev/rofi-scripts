@@ -57,7 +57,9 @@ case $chosen in
         fi
         ;;
     $lock)
-		if [[ -f /usr/bin/i3lock ]]; then
+		if [[ -f /usr/local/bin/i3exit.sh ]]; then
+			i3exit.sh
+		elif [[ -f /usr/bin/i3lock ]]; then
 			i3lock
 		elif [[ -f /usr/bin/betterlockscreen ]]; then
 			betterlockscreen -l
